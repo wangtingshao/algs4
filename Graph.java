@@ -8,7 +8,7 @@ public class Graph {
 
     private final int V;
     private int E;
-    private Bag<Integer>[] adj;
+    private Bag[] adj;
     Graph(int V){
         this.V = V;
     }
@@ -21,25 +21,26 @@ public class Graph {
             adj[i] = new Bag<>();
         }
         for (int i = 0; i < E; i++) {
-
+            adj[in.readInt()].add(in.readInt());
         }
     }
 
     int V(){
         return V;
-    };
+    }
 
     int E(){
         return 0;
     }
+
     Iterable<Integer> adj(int v){
-        return null;
+        return adj[v];
     }
 
 
 
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws FileNotFoundException {
+        Graph graph = new Graph(new In("test.txt"));
     }
 
 
