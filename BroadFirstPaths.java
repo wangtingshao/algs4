@@ -24,6 +24,9 @@ public class BroadFirstPaths {
     void bfs(Graph g, int s) {
         LinkedList<Integer> queue = new LinkedList<>();
         queue.add(s);
+        while(!queue.isEmpty()) {
+
+        }
     }
 
 
